@@ -1181,6 +1181,7 @@ var org =
 ]
 var star = 
 []
+<<<<<<< HEAD
 // ================== Header User SECTION ========================
 
 var usrSm, usrSmString, usrSmFunct, usrSmHTML;
@@ -1196,6 +1197,8 @@ usrSmHTML = usrSmFunct;
 usrSm.append(usrSmHTML(user))
 
 
+=======
+>>>>>>> master
 
 // ================== User SECTION =============================
 
@@ -1214,26 +1217,45 @@ var usr, templateString, templateFunct, templateHTML;
 
 
 // ================== Organization SECTION ===========================
+<<<<<<< HEAD
 
 var orgTIY, orgString, orgFunct, orgHTML;
 
 	orgTIY = $('.orgs')
 
 	orgString = $('#orgTemp').html();
+=======
+/*
+var org, orgString, orgFunct, orgHTML;
+
+	org = $('.orgs')
+
+	orgString = $('orgTemp').html();
+>>>>>>> master
 
 	orgFunct = _.template(orgString);
 
 	orgHTML = orgFunct;
 
+<<<<<<< HEAD
 	_.each(org, function(orgs){
 		orgTIY.append(orgHTML(orgs))
 	});
 
+=======
+	org.append(orgHTML(orgs))
+
+*/
+>>>>>>> master
 
 // ================== Repository SECTION =============================
 
 
+<<<<<<< HEAD
 var repo, repoString, repoFunct, repoHTML, time, dateTime;
+=======
+var repo, repoString, repoFunct, repoHTML;
+>>>>>>> master
 
 	repo = $('.repos')
 
@@ -1247,6 +1269,7 @@ var repo, repoString, repoFunct, repoHTML, time, dateTime;
 		repo.append(repoHTML(repos))
 	});
 
+<<<<<<< HEAD
 /*
 	time = $('.time')
 	dateTime = 
@@ -1254,3 +1277,5 @@ var repo, repoString, repoFunct, repoHTML, time, dateTime;
 	time.append()
 
 */
+=======
+>>>>>>> master
