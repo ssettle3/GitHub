@@ -48,7 +48,7 @@ body {
   width: 1000px;
   clear: both;
   border-top: 1px solid #CDCDCD;
-  padding: 10px 10px 10px 10px;
+  padding: 30px 10px 65px 10px;
   margin: 0 auto;
     .botLeft{
   @include span-columns(6);
@@ -68,12 +68,17 @@ body {
   }
 
 }
+
+// ========================== Main Body ===========================
+
 .container{
-  @include outer-container;
   margin-top: 20px;
 }
+
+// ========================= Sidebar =============================
 .user{
   @include span-columns(4);
+  padding-left: 230px;
 }
 .imgInfo img{
   width: 230px;
@@ -85,20 +90,27 @@ body {
       list-style: none;
     }
 }
+.followNum{
+  font-size: 28px;
+}
+
+// ========================= Repository Section ====================
 .repos{
   @include span-columns(8);
     a{
       text-decoration: none;
       color: #4183C4;
+      font-size: 20px;
     }
     a:hover{
       text-decoration: underline;
     }
     input{
       font-size: 12px;
-      padding: 8px 0px 8px 0px;
+      padding: 8px 0px 8px 5px;
       border-radius: 2px;
       border: 1px solid lightgray;
+      width: 200px;
     }
     #search{
       background: #F8F8F8;
@@ -111,4 +123,24 @@ body {
       border-top: 1px solid lightgray;
       margin-top: 10px;
     }
+}
+.repos:last-child{
+  margin-bottom: 20px;
+  border-bottom: 1px solid lightgray;
+}
+.topRepo{
+  margin: 5px 5px 20px 0px;
+    span{
+      font-size: 14px;
+    }
+}
+#new{
+  background: #67BA4A;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  border-radius: 4px;
+}
+.repoNav a{
+  padding: 5px 5px 5px 5px;
+  font-size: 15px;
 }

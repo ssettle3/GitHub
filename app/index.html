@@ -68,9 +68,9 @@
     </div>    
     <div class="repos">
       <div class="topRepo">
-        <span class="octicon octicon-diff-added">Contributions</span>
-        <span class="octicon octicon-repo">Repositories</span>
-        <span class="octicon octicon-rss">Public Activity</span>
+        <span class="octicon octicon-diff-added"> Contributions</span>
+        <span class="octicon octicon-repo"> Repositories</span>
+        <span class="octicon octicon-rss"> Public Activity</span>
         <button>
           <span class="octicon octicon-pencil"> Edit Profile</span>
         </button>
@@ -84,7 +84,7 @@
         <a href="">Sources</a>
         <a href="">Forks</a>
         <a href="">Mirrors</a>
-        <button type="submit">
+        <button id="new"type="submit">
           <span class="octicon octicon-repo">New</span>
         </button>
       </div>
@@ -130,6 +130,11 @@
 ==================== Script Templates =============================
 -->
 
+
+<!--
+===================== User Sidebar Script ========================
+-->
+
 <script type="text/template" id="userTemp">
 
   <div class="imgInfo">
@@ -154,13 +159,23 @@
     </ul>
   </div>
   <div class="Follow">
-    <%= followers %><span> Followers </span>
-    <%= public_gists %>
-    <%= following %>
+    <div class="followNum"
+      <span><%= followers %></span>
+      <span><%= public_gists %></span>
+      <span><%= following %></span>
+    </div>
+    <div class="followTxt"
+      <span> Follower </span>
+      <span> Starred </span>
+      <span> Following </span>
+    </div>
   </div>
 
 </script>
 
+<!--
+==================== Main Repository Script =========================
+-->
 <script type="text/template" id="repoTemp">
 
   <div class="repositories">
