@@ -53,7 +53,7 @@ var orgTIY, orgString, orgFunct, orgHTML;
 var repo, sortRepos, filtRepo, repoString, repoFunct, repoHTML, time, dateTime;
 
 
-
+	// Sort Array to list repos in order of last updated
 	sortRepos = repos.sort(function (a, b){
 		if (a.updated_at < b.updated_at){
 			return 1;

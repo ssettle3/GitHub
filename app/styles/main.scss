@@ -29,11 +29,12 @@ body {
     }
     a{
       font-weight: bold;
+      color: black;
       text-decoration: none;
       padding: 0px 5px 0px 5px;
     }
     a:hover{
-      color: aqua;
+      color: #4183C4;
       cursor: pointer;
     }
     .mega-octicon{
@@ -55,6 +56,9 @@ body {
       span{
         padding-right: 10px;
       }
+    }
+    .userImgSm:hover{
+      color: #4183C4;
     }
 }
 .topRnav span{
@@ -192,11 +196,14 @@ width: 230px;
       width: 200px;
     }
     #search{
-      background: #F8F8F8;
+      background-image: linear-gradient(#fcfcfc, #eee);
       font-weight: bold;
       padding: 8px 15px 8px 15px;
       border-radius: 2px;
       border: 1px solid lightgray;
+    }
+    #search:hover{
+      background-image: linear-gradient(#eee, #ddd);
     }
     .repositories{
       border-top: 1px solid lightgray;
@@ -236,18 +243,30 @@ width: 230px;
   margin: 5px 5px 20px 0px;
   border-bottom: 1px solid lightgray;
   padding-bottom: 5px;
-    span{
+    .octicon{
+      padding-right: 20px;
+      color: #666;
       font-size: 14px;
-      padding: 0px 25px 0px 10px;
+      vertical-align: middle;
     }
-    button{
-      margin-left: 100px;
+    #Edit{
+      margin: 0px 0px 5px 250px;
       background: #F8F8F8;
       border: 1px solid lightgray;
+      border-radius: 3px;
+      padding: 4px 8px 4px 8px;
+        span{
+          font-weight: bold;
+          padding-right: 5px;
+        }
+    }
+    #Edit:hover{
+      background-image: linear-gradient(#eee, #ddd);
     }
 }
 #new{
   background: #67BA4A;
+  background-image: linear-gradient(#8add6d, #60b044);
   color: white;
   padding: 7px 10px 7px 10px;
   border-radius: 2px;
@@ -255,12 +274,15 @@ width: 230px;
   padding: 10px 12px 10px 12px;
   margin: 0px 0px 0px 10px;
     span{
-      font-size: 13px;
       font-weight: bold;
     }
     .octicon{
       font-size: 15px;
     }
+}
+#new:hover{
+  background-image: linear-gradient(#79d858, #569e3d);
+
 }
 .repoNav{
   a{
