@@ -1181,6 +1181,21 @@ var org =
 ]
 var star = 
 []
+// ================== Header User SECTION ========================
+
+var usrSm, usrSmString, usrSmFunct, usrSmHTML;
+
+usrSm = $('.userImgSm');
+
+usrSmString = $('#userSmTemp').html();
+
+usrSmFunct = _.template(usrSmString);
+
+usrSmHTML = usrSmFunct;
+
+usrSm.append(usrSmHTML(user))
+
+
 
 // ================== User SECTION =============================
 
@@ -1218,7 +1233,7 @@ var orgTIY, orgString, orgFunct, orgHTML;
 // ================== Repository SECTION =============================
 
 
-var repo, repoString, repoFunct, repoHTML;
+var repo, repoString, repoFunct, repoHTML, time, dateTime;
 
 	repo = $('.repos')
 
@@ -1232,3 +1247,10 @@ var repo, repoString, repoFunct, repoHTML;
 		repo.append(repoHTML(repos))
 	});
 
+/*
+	time = $('.time')
+	dateTime = 
+
+	time.append()
+
+*/

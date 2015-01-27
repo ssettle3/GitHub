@@ -46,9 +46,10 @@
       <div class="topRnav">
         <div class="userImgSm">
         </div>
-        <span>ssettle3</span>
-        <span class="octicon octicon-plus"></span>
-        <span class="octicon octicon-triangle-down"></span>
+        <span class="drop-down">
+          <span class="octicon octicon-plus"></span>
+          <span class="octicon octicon-triangle-down"></span>
+        </span>
         <span class="octicon octicon-inbox"></span>
         <span class="octicon octicon-gear"></span>
         <span class="octicon octicon-sign-out"></span>
@@ -72,7 +73,7 @@
         <span class="octicon octicon-diff-added"> Contributions</span>
         <span class="octicon octicon-repo"> Repositories</span>
         <span class="octicon octicon-rss"> Public Activity</span>
-        <button>
+        <button id="Edit">
           <span class="octicon octicon-pencil"> Edit Profile</span>
         </button>
       </div>
@@ -86,7 +87,7 @@
         <a href="">Forks</a>
         <a href="">Mirrors</a>
         <button id="new"type="submit">
-          <span class="octicon octicon-repo">New</span>
+          <span class="octicon octicon-repo"> New</span>
         </button>
       </div>
     </div>
@@ -131,9 +132,14 @@
 ==================== Script Templates =============================
 -->
 
-<!--
-===================== User Sidebar Script ========================
--->
+<!--================== Header User Script ======================-->
+
+<script type="text/template" id="userSmTemp">
+    <img src=" <%= avatar_url %> ">
+    <span> <%= login %> </span>
+</script>
+
+<!--================== User Sidebar Script ======================-->
 
 <script type="text/template" id="userTemp">
 
@@ -172,7 +178,8 @@
   </div>
 </script>
 
-<!-- ===========Organization Script=========-->
+<!-- =====================Organization Script=====================-->
+
 <script type="text/template" id="orgTemp">
 
 <div class="userOrg">
@@ -181,14 +188,17 @@
 </div>
 
 </script>
-<!--
-==================== Main Repository Script =========================
--->
+<!-- ================= Main Repository Script ================== -->
+
 <script type="text/template" id="repoTemp">
 
   <div class="repositories">
     <h1><a href=" <%= html_url %>  "> <%= name %> </a></h1>
     <h4> <%= description %> </h4>
+    <p class="time">
+      Updated
+      <time datetime="<%= updated_at %>" is="relative-time"></time>
+    </p>
     <span> <%= watchers %> </span>
     <span> <%= forks %> </span>
   </div>
