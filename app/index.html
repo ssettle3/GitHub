@@ -10,6 +10,7 @@
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
+    <link rel="stylesheet" href="../bower_components/octicons/octicons/octicons.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -21,40 +22,156 @@
   <body>
 
   <!-- 
-  ========================= Header ===================================
+  ========================= HEADER ===================================
   -->
-  <header>
-    <div class="search">
-      <span class="mega-octicon octicon-mark-github"> f00a
-      </span>
-      <input type="text">
 
-    </div>    
+  <div class="headerContainer">
+    <header>
+      <div class="search">
+        <span class="mega-octicon octicon-mark-github">
+        </span>
+        <input type="text" placeholder="Search Github">
+        <a href="https://github.com/explore">
+          <span>Explore</span>
+        </a>
+        <a href="https://gist.github.com/">
+          <span>Gist</span>
+        </a><a href="https://github.com/blog">
+          <span>Blog</span>
+        </a><a href="https://help.github.com/">
+          <span>Help</span>
+        </a>
+      </div>    
 
+      <div class="topRnav">
+        <div class="userImgSm">
+        </div>
+        <span>ssettle3</span>
+        <span class="octicon octicon-plus"></span>
+        <span class="octicon octicon-triangle-down"></span>
+        <span class="octicon octicon-inbox"></span>
+        <span class="octicon octicon-gear"></span>
+        <span class="octicon octicon-sign-out"></span>
+      </div>
+    </header>
+  </div>
 
-  </header>
+  <!--
+  =========================== BODY ================================
+  -->
+
   <div class="container">
     <div class="user">
+       <div class="orgs">
       
-
+        </div>
     </div>    
     <div class="repos">
-      
-
-
+      <div class="topRepo">
+        <span class="octicon octicon-diff-added">Contributions</span>
+        <span class="octicon octicon-repo">Repositories</span>
+        <span class="octicon octicon-rss">Public Activity</span>
+        <button>
+          <span class="octicon octicon-pencil"> Edit Profile</span>
+        </button>
+      </div>
+      <div class="repoNav">
+        <input type="text" placeholder="Find a repository...">
+        <button id="search" type="submit">Search</button>
+        <a href="">All</a>
+        <a href="">Public</a>
+        <a href="">Private</a>
+        <a href="">Sources</a>
+        <a href="">Forks</a>
+        <a href="">Mirrors</a>
+        <button type="submit">
+          <span class="octicon octicon-repo">New</span>
+        </button>
+      </div>
     </div>
-    <div class="orgs">
-      
-
-
-    </div>
-
   </div>
+
+  <!--
+=========================== FOOTER ================================
+  -->
+
   <footer>
-    
+    <div class="footContainer">
+      <div class="botLeft">
+        <span>© 2015 GitHub, Inc.</span>
+        <a href="https://github.com/site/terms">
+          <span>Terms</span>
+        </a>
+        <a href="https://help.github.com/articles/github-privacy-policy/">
+          <span>Privacy</span>
+        </a>
+        <a href="https://help.github.com/articles/github-security/">
+          <span>Security</span>
+        </a>
+        <a href="https://github.com/contact">
+          <span>Contact</span>
+        </a>
+        <span class="octicon octicon-mark-github"></span>
+      </div>
 
-
+      <div class="botRight">
+        <span>Status</span>
+        <span>API</span>
+        <span>Training</span>
+        <span>Shop</span>
+        <span>Blog</span>
+        <span>About</span>
+      
+      </div>
+    </div>
   </footer>
+
+<!--
+==================== Script Templates =============================
+-->
+
+<script type="text/template" id="userTemp">
+
+  <div class="imgInfo">
+    <img src=" <%= avatar_url %> ">
+    <h1> <%= name %> </h1>
+    <h2> <%= login %> </h2>
+  </div>
+  <div class="userInfo">
+    <ul>
+      <li>
+        <span class="octicon octicon-location"></span> 
+        <%= location %> 
+      </li>
+      <li> 
+        <span class="octicon octicon-mail"></span>
+        <%= email %> 
+      </li>
+      <li> 
+        <span class="octicon octicon-clock"></span>
+        <%= created_at %> 
+      </li>      
+    </ul>
+  </div>
+  <div class="Follow">
+    <%= followers %><span> Followers </span>
+    <%= public_gists %>
+    <%= following %>
+  </div>
+
+</script>
+
+<script type="text/template" id="repoTemp">
+
+  <div class="repositories">
+    <h1><a href=" <%= html_url %>  "> <%= name %> </a></h1>
+    <h4> <%= description %> </h4>
+    <span> <%= watchers %> </span>
+    <span> <%= forks %> </span>
+  </div>
+
+</script>
+
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>

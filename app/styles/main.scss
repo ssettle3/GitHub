@@ -6,10 +6,109 @@
 body {
   background: #FFFFFF;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
 }
-header{
+
+// ========================= HEADER ==========================
+.headerContainer{
   background: #F5F5F5;
+  border-bottom: 1px solid #CDCDCD;
+  width: 100%;
+  height: 50px;
 }
 .search{
-  padding: 10px;
+  @include span-columns(8);
+  padding: 5px 0px 10px 200px;
+    input{
+      width: 300px;
+      border-radius: 5px;
+      margin-left: 5px;
+      font-size: 12px;
+      padding: 5px 0px 5px 2px;
+    }
+    a{
+      font-weight: bold;
+      text-decoration: none;
+      padding: 0px 5px 0px 5px;
+    }
+    a:hover{
+      color: aqua;
+      cursor: pointer;
+    }
+}
+.topRnav{
+  @include span-columns(4);
+  padding: 15px 0px 10px 0px;
+  font-weight: bold;
+}
+
+// =================== FOOTER ==============================
+
+.footContainer{
+  width: 1000px;
+  clear: both;
+  border-top: 1px solid #CDCDCD;
+  padding: 10px 10px 10px 10px;
+  margin: 0 auto;
+    .botLeft{
+  @include span-columns(6);
+      .octicon{
+        margin-left: 50px;
+        font-size: 25px;
+        vertical-align: middle;
+      }
+  }
+  .botLeft a{
+        color: #4183C4;
+        text-decoration: none;
+  }
+
+  .botRight{
+  @include span-columns(6);
+  }
+
+}
+.container{
+  @include outer-container;
+  margin-top: 20px;
+}
+.user{
+  @include span-columns(4);
+}
+.imgInfo img{
+  width: 230px;
+  border-radius: 8px;
+}
+.userInfo{
+  color: black;
+    ul{
+      list-style: none;
+    }
+}
+.repos{
+  @include span-columns(8);
+    a{
+      text-decoration: none;
+      color: #4183C4;
+    }
+    a:hover{
+      text-decoration: underline;
+    }
+    input{
+      font-size: 12px;
+      padding: 8px 0px 8px 0px;
+      border-radius: 2px;
+      border: 1px solid lightgray;
+    }
+    #search{
+      background: #F8F8F8;
+      font-weight: bold;
+      padding: 8px 15px 8px 15px;
+      border-radius: 2px;
+      border: 1px solid lightgray;
+    }
+    .repositories{
+      border-top: 1px solid lightgray;
+      margin-top: 10px;
+    }
 }
