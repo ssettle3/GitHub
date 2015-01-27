@@ -16,20 +16,21 @@ var usr, templateString, templateFunct, templateHTML;
 
 
 // ================== Organization SECTION ===========================
-/*
-var org, orgString, orgFunct, orgHTML;
 
-	org = $('.orgs')
+var orgTIY, orgString, orgFunct, orgHTML;
 
-	orgString = $('orgTemp').html();
+	orgTIY = $('.orgs')
+
+	orgString = $('#orgTemp').html();
 
 	orgFunct = _.template(orgString);
 
 	orgHTML = orgFunct;
 
-	org.append(orgHTML(orgs))
+	_.each(org, function(orgs){
+		orgTIY.append(orgHTML(orgs))
+	});
 
-*/
 
 // ================== Repository SECTION =============================
 

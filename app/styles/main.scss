@@ -72,29 +72,69 @@ body {
 // ========================== Main Body ===========================
 
 .container{
-  margin-top: 20px;
+  margin: 20px 0px 0px 15%;
+  width: 1000px;
 }
 
-// ========================= Sidebar =============================
-.user{
-  @include span-columns(4);
-  padding-left: 230px;
+// ========================= Sidebar 
+.sidebar{
+@include span-columns(4);
+
 }
-.imgInfo img{
+.user{
   width: 230px;
-  border-radius: 8px;
+}
+.imgInfo{ 
+  margin-bottom: 20px;
+    img{
+      width: 230px;
+      border-radius: 8px;
+    }
+    h1{
+      margin: 0px;
+      font-size: 25px;
+    }
+    h2{
+      margin: 0px;
+      font-weight: normal;
+      color: #666674;
+      font-size: 20px;
+    }
 }
 .userInfo{
   color: black;
+  border-top: 1px solid lightgray;
     ul{
       list-style: none;
+      padding: 0px 0px 0px 0px;
+        span{
+          color: lightgray;
+          padding: 0px 5px 5px 0px;
+        }
     }
+}
+.Follow{
+  text-align: center;
+  border-top: 1px solid lightgray;
+  padding-top: 10px;
 }
 .followNum{
   font-size: 28px;
+  color: #4183C4;
+  font-weight: bold;
+    span{
+      padding-left: 50px;
+    }
+}
+.followTxt{
+  font-size: 11px;
+    span{
+      padding-left: 30px;
+    }
 }
 
-// ========================= Repository Section ====================
+
+// ========================= Repository Section 
 .repos{
   @include span-columns(8);
     a{
@@ -141,6 +181,6 @@ body {
   border-radius: 4px;
 }
 .repoNav a{
-  padding: 5px 5px 5px 5px;
-  font-size: 15px;
+  padding: 5px 2px 5px 2px;
+  font-size: 14px;
 }

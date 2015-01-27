@@ -61,10 +61,11 @@
   -->
 
   <div class="container">
-    <div class="user">
-       <div class="orgs">
-      
-        </div>
+    <div class="sidebar">
+      <div class="user">
+      </div>
+      <div class="orgs">
+      </div>  
     </div>    
     <div class="repos">
       <div class="topRepo">
@@ -130,7 +131,6 @@
 ==================== Script Templates =============================
 -->
 
-
 <!--
 ===================== User Sidebar Script ========================
 -->
@@ -170,9 +170,17 @@
       <span> Following </span>
     </div>
   </div>
-
 </script>
 
+<!-- ===========Organization Script=========-->
+<script type="text/template" id="orgTemp">
+
+<div class="userOrg">
+    <h1> Organizations </h1>
+    <img src=" <%= avatar_url %> ">
+</div>
+
+</script>
 <!--
 ==================== Main Repository Script =========================
 -->
