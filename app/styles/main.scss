@@ -21,10 +21,11 @@ body {
   padding: 10px 0px 10px 200px;
     input{
       width: 350px;
-      border-radius: 5px;
+      border-radius: 3px;
       margin-left: 5px;
       font-size: 12px;
       padding: 5px 0px 5px 2px;
+      border: 1px solid lightgray;
     }
     a{
       font-weight: bold;
@@ -174,6 +175,7 @@ width: 230px;
 // ========================= Repository Section 
 .repos{
   @include span-columns(8);
+  width: 740px;
     a{
       text-decoration: none;
       color: #4183C4;
@@ -198,7 +200,8 @@ width: 230px;
     }
     .repositories{
       border-top: 1px solid lightgray;
-      margin-top: 10px;
+      margin: 10px 0px 30px 0px;
+      width: 100%;
         h1{
           margin-bottom: 8px;
           padding-top: 5px;
@@ -210,6 +213,20 @@ width: 230px;
           margin-top: 0px;
         }
     }
+}
+.repositories .repoStats{
+  display: inline-block;
+  float: right;
+  padding-top: 30px;
+  color: #888888;
+  font-weight: bold;
+    div{
+      float: left;
+      margin-right: 10px;
+    }
+}
+.statStar .octicon{
+  padding-left: 10px;
 }
 .repos:last-child{
   margin-bottom: 20px;
@@ -232,11 +249,31 @@ width: 230px;
 #new{
   background: #67BA4A;
   color: white;
-  padding: 5px 10px 5px 10px;
-  border-radius: 4px;
-  float: right;
+  padding: 7px 10px 7px 10px;
+  border-radius: 2px;
+  border: 1px solid #5CA941;
+  padding: 10px 12px 10px 12px;
+  margin: 0px 0px 0px 10px;
+    span{
+      font-size: 13px;
+      font-weight: bold;
+    }
+    .octicon{
+      font-size: 15px;
+    }
 }
-.repoNav a{
-  padding: 5px 2px 5px 2px;
-  font-size: 14px;
+.repoNav{
+  a{
+   padding: 5px 2px 5px 2px;
+   font-size: 14px;
+  }
+  input{
+   width: 260px;
+  }
+  #search{
+    margin-right: 35px;
+  }
 }
+
+
+

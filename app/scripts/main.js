@@ -50,9 +50,21 @@ var orgTIY, orgString, orgFunct, orgHTML;
 // ================== Repository SECTION =============================
 
 
-var repo, repoString, repoFunct, repoHTML, time, dateTime;
+var repo, sortRepos, filtRepo, repoString, repoFunct, repoHTML, time, dateTime;
 
-	repo = $('.repos')
+
+
+	sortRepos = repos.sort(function (a, b){
+		if (a.updated_at < b.updated_at){
+			return 1;
+		}
+		if (a.updated_at > b.updated_at){
+			return -1;
+		}
+	});
+
+
+	repo = $('.repos');
 
 	repoString = $('#repoTemp').html();
 
@@ -60,8 +72,8 @@ var repo, repoString, repoFunct, repoHTML, time, dateTime;
 
 	repoHTML = repoFunct;
 
-	_.each(repos, function(repos){
-		repo.append(repoHTML(repos))
+	_.each(repos, function(sortRepos){
+		repo.append(repoHTML(sortRepos))
 	});
 
 /*
