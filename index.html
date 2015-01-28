@@ -14,15 +14,14 @@
   </head>
   <body>
 
-  <!-- 
-  ========================= HEADER ===================================
-  -->
+  <!--==== HEADER ====-->
 
   <div class="headerContainer">
     <header>
       <div class="search">
-        <span class="mega-octicon octicon-mark-github">
-        </span>
+        <a href="https://github.com/">
+          <span class="mega-octicon octicon-mark-github"></span>
+        </a>
         <input type="text" placeholder="Search Github">
         <a href="https://github.com/explore">
           <span>Explore</span>
@@ -39,16 +38,9 @@
       <div class="topRnav">
         <div class="userImgSm">
         </div>
-<<<<<<< HEAD
         <span class="drop-down">
-          <span class="octicon octicon-plus"></span>
-          <span class="octicon octicon-triangle-down"></span>
+          <i class="octicon octicon-plus"></i>
         </span>
-=======
-        <span>ssettle3</span>
-        <span class="octicon octicon-plus"></span>
-        <span class="octicon octicon-triangle-down"></span>
->>>>>>> master
         <span class="octicon octicon-inbox"></span>
         <span class="octicon octicon-gear"></span>
         <span class="octicon octicon-sign-out"></span>
@@ -56,40 +48,30 @@
     </header>
   </div>
 
-  <!--
-  =========================== BODY ================================
-  -->
+  <!--==== BODY ====-->
 
   <div class="container">
-<<<<<<< HEAD
     <div class="sidebar">
       <div class="user">
       </div>
       <div class="orgs">
       </div>  
-=======
-    <div class="user">
-       <div class="orgs">
-      
-        </div>
->>>>>>> master
     </div>    
     <div class="repos">
       <div class="topRepo">
         <span class="octicon octicon-diff-added"> Contributions</span>
         <span class="octicon octicon-repo"> Repositories</span>
         <span class="octicon octicon-rss"> Public Activity</span>
-<<<<<<< HEAD
         <button id="Edit">
-=======
-        <button>
->>>>>>> master
-          <span class="octicon octicon-pencil"> Edit Profile</span>
+          <span class="octicon octicon-pencil"></span>
+          <span> Edit Profile</span>
         </button>
       </div>
       <div class="repoNav">
         <input type="text" placeholder="Find a repository...">
-        <button id="search" type="submit">Search</button>
+        <button id="search" type="submit">
+          <span>Search</span>
+        </button>
         <a href="">All</a>
         <a href="">Public</a>
         <a href="">Private</a>
@@ -97,19 +79,16 @@
         <a href="">Forks</a>
         <a href="">Mirrors</a>
         <button id="new"type="submit">
-<<<<<<< HEAD
-          <span class="octicon octicon-repo"> New</span>
-=======
-          <span class="octicon octicon-repo">New</span>
->>>>>>> master
+          <a href="https://github.com/new">
+            <span class="octicon octicon-repo"></span>
+            <span> New </span>
+          </a>
         </button>
       </div>
     </div>
   </div>
 
-  <!--
-=========================== FOOTER ================================
-  -->
+  <!--==== FOOTER ====-->
 
   <footer>
     <div class="footContainer">
@@ -131,41 +110,47 @@
       </div>
 
       <div class="botRight">
-        <span>Status</span>
-        <span>API</span>
-        <span>Training</span>
-        <span>Shop</span>
-        <span>Blog</span>
-        <span>About</span>
-      
+        <a href="https://status.github.com/">
+          <span>Status</span>
+        </a>
+        <a href="https://developer.github.com/">
+          <span>API</span>
+        </a>
+        <a href="https://training.github.com/">
+          <span>Training</span>
+        </a>
+        <a href="https://github.myshopify.com/">
+          <span>Shop</span>
+        </a>
+        <a href="https://github.com/blog">
+          <span>Blog</span>
+        </a>
+        <a href="https://github.com/about">
+          <span>About</span>
+        </a>
       </div>
     </div>
   </footer>
 
-<!--
-==================== Script Templates =============================
--->
+<!--=================== Script Templates =================-->
 
-<<<<<<< HEAD
-<!--================== Header User Script ======================-->
+<!--==== Header User Script ====-->
 
 <script type="text/template" id="userSmTemp">
-    <img src=" <%= avatar_url %> ">
-    <span> <%= login %> </span>
+    <a href="https://github.com/<%= login %> ">
+      <img src=" <%= avatar_url %> ">
+      <span> <%= login %> </span>
+    </a>
 </script>
 
-<!--================== User Sidebar Script ======================-->
-=======
-
-<!--
-===================== User Sidebar Script ========================
--->
->>>>>>> master
+<!--==== User Sidebar Script ====-->
 
 <script type="text/template" id="userTemp">
 
   <div class="imgInfo">
-    <img src=" <%= avatar_url %> ">
+    <a href="https://github.com/<%=login%>">
+      <img src=" <%= avatar_url %> ">
+    </a>
     <h1> <%= name %> </h1>
     <h2> <%= login %> </h2>
   </div>
@@ -175,13 +160,15 @@
         <span class="octicon octicon-location"></span> 
         <%= location %> 
       </li>
-      <li> 
+      <li>
         <span class="octicon octicon-mail"></span>
-        <%= email %> 
+        <a href="mailto:<%=email%>"> 
+          <%= email %> 
+        </a>
       </li>
       <li> 
         <span class="octicon octicon-clock"></span>
-        <%= created_at %> 
+        <div class='join'></div>
       </li>      
     </ul>
   </div>
@@ -197,43 +184,39 @@
       <span> Following </span>
     </div>
   </div>
-<<<<<<< HEAD
 </script>
 
-<!-- =====================Organization Script=====================-->
+<!-- ==== Organization Script ====-->
 
 <script type="text/template" id="orgTemp">
 
 <div class="userOrg">
     <h1> Organizations </h1>
-    <img src=" <%= avatar_url %> ">
+    <a href="https://github.com/tiy-atl-js-q1-2015">
+      <img src=" <%= avatar_url %> ">
+    </a>
 </div>
 
 </script>
-<!-- ================= Main Repository Script ================== -->
+<!--==== Main Repository Script ====-->
 
-=======
-
-</script>
-
-<!--
-==================== Main Repository Script =========================
--->
->>>>>>> master
 <script type="text/template" id="repoTemp">
 
   <div class="repositories">
+    <div class="repoStats">
+      <div class="statStar">
+        <span> <%= language %> </span>
+        <span class="octicon octicon-star"></span>
+        <span> <%= stargazers_count %> </span>
+      </div>
+      <div class="statFork">
+        <span class="octicon octicon-git-branch"></span>
+        <span> <%= forks_count %> </span>
+      </div>
+    </div>
     <h1><a href=" <%= html_url %>  "> <%= name %> </a></h1>
     <h4> <%= description %> </h4>
-<<<<<<< HEAD
-    <p class="time">
-      Updated
-      <time datetime="<%= updated_at %>" is="relative-time"></time>
-    </p>
-=======
->>>>>>> master
-    <span> <%= watchers %> </span>
-    <span> <%= forks %> </span>
+    <span class="updated"> Updated </span>
   </div>
 
 </script>
