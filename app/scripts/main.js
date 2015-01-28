@@ -1,3 +1,5 @@
+
+
 // ==== Header User SECTION ====
 
 var usrSm, usrSmString, usrSmFunct, usrSmHTML;
@@ -59,5 +61,25 @@ var repo, sortRepos, filtRepo, repoString, repoFunct, repoHTML, time, dateTime;
 	_.each(repos, function(sortRepos){
 		repo.append(repoHTML(sortRepos))
 	});
+
+
+
+// ==== Date Stuff ====
+
+var date, dt, dtt, dttt, year, month, day, hours, minutes, seconds;
+	
+	joined = $('.join');
+
+	date = user.created_at;
+	dt = date.split("-");
+	year = dt[0];
+	month = dt[1];
+	dtt = dt[2].split("T");
+	day = dtt[0];
+	dttt = dtt[1].split(":");
+	hours = dttt[0];
+	minutes = dttt[1];
+
+	joined.append("Joined on " + month + " " + day +", " + year);
 
 

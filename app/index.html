@@ -46,8 +46,7 @@
         <div class="userImgSm">
         </div>
         <span class="drop-down">
-          <span class="octicon octicon-plus"></span>
-          <span class="octicon octicon-triangle-down"></span>
+          <i class="octicon octicon-plus"></i>
         </span>
         <span class="octicon octicon-inbox"></span>
         <span class="octicon octicon-gear"></span>
@@ -176,7 +175,7 @@
       </li>
       <li> 
         <span class="octicon octicon-clock"></span>
-        <%= created_at %> 
+        <div class='join'></div>
       </li>      
     </ul>
   </div>
@@ -224,7 +223,7 @@
     </div>
     <h1><a href=" <%= html_url %>  "> <%= name %> </a></h1>
     <h4> <%= description %> </h4>
-    <time> <%= updated_at %> </time>
+    <span class="updated"> Updated </span>
   </div>
 
 </script>

@@ -10,6 +10,7 @@ body {
 }
 
 // ==== Header ====
+
 .headerContainer{
   background: #F5F5F5;
   border-bottom: 1px solid #CDCDCD;
@@ -63,7 +64,26 @@ body {
     .userImgSm a:hover{
       color: #4183C4;
     }
+    .octicon{
+      font-size: 20px;
+    }
+    .octicon:last-child{
+      font-size: 17px;
+    }
+    .octicon:hover{
+      cursor: pointer;
+      color: #4183C4;
+    }
 }
+.dropdown{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8.7px 5px 0 5px;
+  border-color: #000000 transparent transparent transparent;
+
+}
+
 .topRnav span{
   padding-right: 10px;
 }
@@ -120,8 +140,8 @@ body {
 .sidebar{
 @include span-columns(4);
 width: 230px;
-
 }
+
 .user{
   width: 230px;
 }
@@ -168,6 +188,10 @@ width: 230px;
       line-height: 20px;
     }
 }
+.join{
+  color: black;
+  display: inline-block;
+}
 .Follow{
   text-align: center;
   border-top: 1px solid lightgray;
@@ -202,6 +226,7 @@ width: 230px;
 
 
 // ==== Repository Section ====
+
 .repos{
   @include span-columns(8);
   width: 740px;
@@ -288,6 +313,9 @@ width: 230px;
     #Edit:hover{
       background-image: linear-gradient(#eee, #ddd);
     }
+}
+.updated{
+  color: #88888B;
 }
 #new{
   background: #67BA4A;
