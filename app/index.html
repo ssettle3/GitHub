@@ -21,15 +21,14 @@
   </head>
   <body>
 
-  <!-- 
-  ========================= HEADER ===================================
-  -->
+  <!--==== HEADER ====-->
 
   <div class="headerContainer">
     <header>
       <div class="search">
-        <span class="mega-octicon octicon-mark-github">
-        </span>
+        <a href="https://github.com/">
+          <span class="mega-octicon octicon-mark-github"></span>
+        </a>
         <input type="text" placeholder="Search Github">
         <a href="https://github.com/explore">
           <span>Explore</span>
@@ -57,9 +56,7 @@
     </header>
   </div>
 
-  <!--
-  =========================== BODY ================================
-  -->
+  <!--==== BODY ====-->
 
   <div class="container">
     <div class="sidebar">
@@ -90,16 +87,16 @@
         <a href="">Forks</a>
         <a href="">Mirrors</a>
         <button id="new"type="submit">
-          <span class="octicon octicon-repo"></span>
-          <span> New </span>
+          <a href="https://github.com/new">
+            <span class="octicon octicon-repo"></span>
+            <span> New </span>
+          </a>
         </button>
       </div>
     </div>
   </div>
 
-  <!--
-=========================== FOOTER ================================
-  -->
+  <!--==== FOOTER ====-->
 
   <footer>
     <div class="footContainer">
@@ -121,34 +118,47 @@
       </div>
 
       <div class="botRight">
-        <span>Status</span>
-        <span>API</span>
-        <span>Training</span>
-        <span>Shop</span>
-        <span>Blog</span>
-        <span>About</span>
-      
+        <a href="https://status.github.com/">
+          <span>Status</span>
+        </a>
+        <a href="https://developer.github.com/">
+          <span>API</span>
+        </a>
+        <a href="https://training.github.com/">
+          <span>Training</span>
+        </a>
+        <a href="https://github.myshopify.com/">
+          <span>Shop</span>
+        </a>
+        <a href="https://github.com/blog">
+          <span>Blog</span>
+        </a>
+        <a href="https://github.com/about">
+          <span>About</span>
+        </a>
       </div>
     </div>
   </footer>
 
-<!--
-==================== Script Templates =============================
--->
+<!--=================== Script Templates =================-->
 
-<!--================== Header User Script ======================-->
+<!--==== Header User Script ====-->
 
 <script type="text/template" id="userSmTemp">
-    <img src=" <%= avatar_url %> ">
-    <span> <%= login %> </span>
+    <a href="https://github.com/<%= login %> ">
+      <img src=" <%= avatar_url %> ">
+      <span> <%= login %> </span>
+    </a>
 </script>
 
-<!--================== User Sidebar Script ======================-->
+<!--==== User Sidebar Script ====-->
 
 <script type="text/template" id="userTemp">
 
   <div class="imgInfo">
-    <img src=" <%= avatar_url %> ">
+    <a href="https://github.com/<%=login%>">
+      <img src=" <%= avatar_url %> ">
+    </a>
     <h1> <%= name %> </h1>
     <h2> <%= login %> </h2>
   </div>
@@ -158,9 +168,11 @@
         <span class="octicon octicon-location"></span> 
         <%= location %> 
       </li>
-      <li> 
+      <li>
         <span class="octicon octicon-mail"></span>
-        <%= email %> 
+        <a href="mailto:<%=email%>"> 
+          <%= email %> 
+        </a>
       </li>
       <li> 
         <span class="octicon octicon-clock"></span>
@@ -182,19 +194,19 @@
   </div>
 </script>
 
-<!-- =====================Organization Script=====================-->
+<!-- ==== Organization Script ====-->
 
 <script type="text/template" id="orgTemp">
 
 <div class="userOrg">
     <h1> Organizations </h1>
-    <a href=" <%= url %>">
+    <a href="https://github.com/tiy-atl-js-q1-2015">
       <img src=" <%= avatar_url %> ">
     </a>
 </div>
 
 </script>
-<!-- ================= Main Repository Script ================== -->
+<!--==== Main Repository Script ====-->
 
 <script type="text/template" id="repoTemp">
 
@@ -213,8 +225,6 @@
     <h1><a href=" <%= html_url %>  "> <%= name %> </a></h1>
     <h4> <%= description %> </h4>
     <time> <%= updated_at %> </time>
-    <span> <%= watchers %> </span>
-    <span> <%= forks %> </span>
   </div>
 
 </script>
